@@ -16,9 +16,9 @@ are needed to create a file locally (in your cloned repo)
 and push them (sync) with GitHub.  Only `git` commands are 
 valid answers
 
-1. git command to view the status of the repository:
-2. git command example to add a file for tracking:
-3. git command to commit changes:
+1. git command to view the status of the repository: git status
+2. git command example to add a file for tracking: git add file
+3. git command to commit changes: 
 4. git command to sync local commits with GitHub:
 5. git command to sync commits on GitHub to `clone`d repository:
 
