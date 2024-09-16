@@ -19,32 +19,32 @@ valid answers
 1. git command to view the status of the repository: git status
 2. git command example to add a file for tracking: git add file
 3. git command to commit changes: git commit -m "changes"
-4. git command to sync local commits with GitHub:
-5. git command to sync commits on GitHub to `clone`d repository:
+4. git command to sync local commits with GitHub: git push
+5. git command to sync commits on GitHub to `clone`d repository: git pull
 
 ## Part 3 Answers
 
 1. `chmod u+r bubbles.txt`
-    - Means: 
+    - Means: For bubbles.txt, the user is now allowed to read the file.
 2. `chmod u=rw,g-w,o-x banana.cabana`
-    - Means: 
+    - Means: For banana.cabana, the user can read and write in the file, the group can no longer write in the file, others can no longer execute the file.
 3. `chmod a=w snow.md`
-    - Means: 
+    - Means: For snow.md, the user, group, and others can write in the file.
 4. `chmod 751 program`
-    - Means: 
+    - Means: For program, the user can read, write, and execute, the group can write and execute, and others can only execute.
 5. `chmod -R ug+w share`
-    - Means: 
+    - Means: For share, the user and group can now write in all files.
 
 ## Part 4 Answers
 
-1. Command to create new user: 
-2. Path to user's home directory: 
-3. Evaluate if `ubuntu` can add files to user's home directory:
-4. Command to switch to user:
-5. Command(s) to go to user's home directory:
-6. Evaluate if user can add files to user's home directory:
-7. Command to switch to `ubuntu`:
-8. Command to return to `ubuntu` home directory: 
+1. Command to create new user: sudo adduser jcox
+2. Path to user's home directory: /home/jcox
+3. Evaluate if `ubuntu` can add files to user's home directory: No. Ubuntu cannot get into the directory
+4. Command to switch to user: su jcox
+5. Command(s) to go to user's home directory: cd /home
+6. Evaluate if user can add files to user's home directory: No, they cannot. sudo touch file --> touch: cannot touch 'file': Permission denied
+7. Command to switch to `ubuntu`: exit
+8. Command to return to `ubuntu` home directory: cd /home
 
 ## Part 5 Answers
 
