@@ -50,18 +50,18 @@ valid answers
 
 For each, write the command used or answer the question posed.
 
-1. Command to create group named `crew`:
-2. Command(s) to add `ubuntu` & user to group `crew`:
-3. Command to modify `share` to have group ownership of `crew`:
-4. Command to switch to user:
-5. Command to add file to `share`: 
-6. Evaluate why these steps allowed the above action:
+1. Command to create group named `crew`: sudo addgroup crew
+2. Command(s) to add `ubuntu` & user to group `crew`: sudo adduser ubuntu crew, sudo adduser jcox crew
+3. Command to modify `share` to have group ownership of `crew`: sudo chgrp crew share
+4. Command to switch to user: su jcox
+5. Command to add file to `share`: sudo touch filename
+6. Evaluate why these steps allowed the above action: Users ubuntu and jcox were added into crew. Crew gained ownership of share which meant that ubuntu and jcox gained ownership.
 
 ## Part 6 Answers
 
 For each, write the command used or answer the question posed.
 
-1. Command to create file using `sudo`: 
-2. Evaluate (in plain text) the permission of the file: 
-3. Provide a method to edit the file without modifying permissions: 
-4. Command(s) to modify permissions:
+1. Command to create file using `sudo`: sudo touch sudowho.txt
+2. Evaluate (in plain text) the permission of the file: ubuntu can make changes in the file with sudo. Others can only read.
+3. Provide a method to edit the file without modifying permissions: sudo vim sudowho.txt
+4. Command(s) to modify permissions: sudo chown ubuntu sudowho.txt
