@@ -5,33 +5,37 @@
 
 ## Part 1 Answers
 
-1. `ssh` command before configuring `config` file:
-2. HostName:
-3. User:
-4. IdentityFile:
-5. `~/.ssh/config` contents:
+1. `ssh` command before configuring `config` file: ssh -i labsuser.pem ubuntu@34.228.102.218
+2. HostName: 34.228.102.218
+3. User: ubuntu
+4. IdentityFile: ~/.ssh/labsuser.pem
+5. `~/.ssh/config` contents: 
 
 ```
-Paste your config file entry here.  By placing it between these 
-triple quote sets GitHub will make this look like a block of code
+#ssh -i labsuser.pem ubuntu@34.228.102.218
+
+Host 2350
+        HostName 34.228.102.218
+        User ubuntu
+        IdentityFile ~/.ssh/labsuser.pem
 ```
 
-6. `ssh` command after configuring an entry in the `config` file:
+6. `ssh` command after configuring an entry in the `config` file: ssh 2350
 
 ## Part 2 Answers
 
 1. `printenv HOME > thishouse`
-   - Explanation: 
+   - Explanation: Creates a file named thishouse and prints the path to home in the file.
 2. `cat doesnotexist 2>> hush.txt`
-   - Explanation: 
+   - Explanation: Creates a file named hush.txt and prints an error saying that the file or directory doesn't exist.
 3. `cat nums.txt | sort -n >> all_nums.txt`
-   - Explanation: 
+   - Explanation: Adds the sorted version of the text in nums.txt into all_nums.txt
 4. `cat << "DONE" > here.txt`
-   - Explanation: 
+   - Explanation: Creates a file named here.txt and all text typed is added to the file until DONE is typed.
 5. `ls -lt ~ | head`
-   - Explanation: 
+   - Explanation: The first 10 lines from ls -lt are outputted.
 6. `history | grep ".md"`
-   - Explanation: 
+   - Explanation: Outputs commands in history that contain rmd or .md.
 
 ## Part 3
 
