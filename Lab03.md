@@ -1,7 +1,7 @@
 ## Lab 03
 
-- Name:
-- Email
+- Name: Jordan Cox
+- Email: cox.389@wright.edu
 
 ## Part 1 Answers
 
