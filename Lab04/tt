@@ -1,0 +1,73 @@
+#!/usr/bin/bash
+
+arg_1=$1
+arg_2=$2
+tasks="/home/ubuntu/.tasks"
+
+if [[ ! -f $tasks ]];then
+	touch $tasks
+fi
+
+chmod +x $tasks
+
+case $arg_1 in	
+
+	"add")
+	
+	if [[ -z $arg_2 ]];then
+		echo "Enter task description"
+		read arg_2
+	fi
+
+	echo "$arg_2" >> "$tasks"
+	echo "Task added"
+	;;
+
+	"complete")
+	
+	if [[ -z $arg_2 ]];then
+                echo "Enter task description"
+                read arg_2
+        fi
+
+	if  grep -q -x "$arg_2" "$tasks" ;then
+		sed -i "/$arg_2/d" "$tasks"
+		echo "Task removed"
+	else
+		echo "Task not found"
+	fi
+	;;
+
+	"view")
+	cat $tasks
+	;;
+
+	"clear")
+		
+	echo "Remove all tasks? [y/n]"
+	read arg_2
+	if [[ $arg_2 = 'y' ]] || [[ $arg_2 = 'Y' ]];then
+	       rm $tasks
+	elif [[ $arg_2 = 'n' ]] || [[ $arg_2 = 'N' ]];then
+		exit
+	else
+		echo "Invalid argument"
+	fi
+	;;
+
+	"help")
+	echo "add: add a task to $tasks"
+        echo "complete: remove a task from $tasks"
+        echo "view: view the content in $tasks"
+        echo "clear: remove $tasks"
+	;;
+
+	*)
+	echo "Invalid argument"
+	echo "add: add a task to $tasks"
+	echo "complete: remove a task from $tasks"
+	echo "view: view the content in $tasks"
+	echo "clear: remove $tasks"
+	;;
+
+esac
