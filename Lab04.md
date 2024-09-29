@@ -13,49 +13,54 @@ Verify that `tt` made it to your GitHub repository for this course and is in you
 
 Fill in with your user guide here
 
+echo "add: add a task to $tasks"
+echo "complete: remove a task from $tasks"
+echo "view: view the content in $tasks"
+echo "clear: remove $tasks"
+
 ### Sample runs
 
 Example of using `add` task
 ```
-show blocks
-of copy / pasted runs
-of the tt script
+bash tt add jog
+Task added
+bash tt add sprint
+Task added
 ```
 
 Example of using `complete` task
 ```
-show blocks
-of copy / pasted runs
-of the tt script
+bash tt complete jog
+Task removed
 ```
 
 Example of using `view` tasks
 ```
-show blocks
-of copy / pasted runs
-of the tt script
+bash tt view
+sprint
 ```
 
 Example of using `clear` tasks
 ```
-show blocks
-of copy / pasted runs
-of the tt script
+bash tt clear
+Remove all tasks? [y/n]
+(y or Y, n or N)
 ```
 
 Example of using `help`
 ```
-show blocks
-of copy / pasted runs
-of the tt script
+echo "add: add a task to $tasks"
+echo "complete: remove a task from $tasks"
+echo "view: view the content in $tasks"
+echo "clear: remove $tasks"
 ```
 
 ## Part 5 - PATH for all
 
-- Chosen PATH directory:  
-- Link preference (hard or symbolic):
-   - Justification of preference for this use case:
-- Command to create link:
+- Chosen PATH directory: $HOME/.ssh/Jordan-003/Lab04
+- Link preference (hard or symbolic): symbolic
+   - Justification of preference for this use case: The link is connected to the content of the file.
+- Command to create link: ln -s ~/.ssh/Jordan-003/Lab04/tt soft-link
 - Notes about permissions modified: 
 - How you tested that you can run `tt` from anywhere on filesystem:
 - How you tested that other users can run `tt`:
