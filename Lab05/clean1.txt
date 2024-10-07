@@ -1,0 +1,15 @@
+#_#@happy.face
+#bringit@bomb.com
+$$$bills@money.want
+123john.doe@example.com
+?hello@gmail.com
+admin@123.456
+chris.anderson@example..com 
+david.miller@ example.com 
+invalid-email.com
+jennifer.brown@ example .com 
+lisa.johnson@ 
+mark.wilson@example,com 
+sarah.connor@gmail.com
+sarah.jackson@.com 
+support@company
