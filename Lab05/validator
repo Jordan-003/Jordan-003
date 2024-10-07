@@ -1,0 +1,19 @@
+#!/usr/bin/bash
+
+case $1 in
+	"emails.txt")
+		grep -E "." $1 | sort | uniq > clean1.txt
+	;;
+	"clean1.txt")
+		grep -iP '^\w' $1 > clean2.txt
+	;;
+	"clean2.txt")
+		grep -vE "(\W{2,})" $1 > clean3.txt
+	;;
+	"clean3.txt")
+		grep -P "@\w+.(com|net|TLD|org)$" $1 > clean4.txt
+	;;
+	*)
+		echo "File does not exists"
+	;;
+esac
