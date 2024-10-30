@@ -1,31 +1,44 @@
 ## Lab 08
 
-- Name:
-- Email:
+- Name: Jordan Cox
+- Email: cox.389@wright.edu
 
 ## Part 1
 
-1. Command:
+1. Command: `lsblk`
 ```
-Output here
+xvda     202:0    0   16G  0 disk
+├─xvda1  202:1    0 15.9G  0 part /
+├─xvda14 202:14   0    4M  0 part
+└─xvda15 202:15   0  106M  0 part /boot/efi
 ```
-2. Command:
+2. Command: `sudo parted /dev/xvda` `print`
 ```
-Output here
+Model: Xen Virtual Block Device (xvd)
+Disk /dev/xvda: 17.2GB
+Sector size (logical/physical): 512B/512B
+Partition Table: gpt
+Disk Flags:
+
+Number  Start   End     Size    File system  Name  Flags
+14      1049kB  5243kB  4194kB                     bios_grub
+15      5243kB  116MB   111MB   fat32              boot, esp
+ 1      116MB   17.2GB  17.1GB  ext4
 ```
 3. For the `xvda` partition table:
-    - Does it use MBR or GPT?
-    - How many partitions are on the block device?
-    - What is the largest partition?
-4. Command:
+    - Does it use MBR or GPT? GPT
+    - How many partitions are on the block device? 3
+    - What is the largest partition? xvda1
+4. Command: `blkid`
 ```
-Output here
+/dev/xvda1: LABEL="cloudimg-rootfs" UUID="b78b2f9f-3a08-427a-ad4e-4a04f235761c" BLOCK_SIZE="4096" TYPE="ext4" PARTUUID="5685b7d3-4911-4237-9405-e73d2d78ca3e"
+/dev/xvda15: LABEL_FATBOOT="UEFI" LABEL="UEFI" UUID="4B1C-F903" BLOCK_SIZE="512" TYPE="vfat" PARTUUID="1dcb7fe9-f679-4d8b-afbe-2f4f444c7095"
 ```
 5. For the primary partition:
-    - What partition is the root filesystem on?
-    - What is the partition label?
-    - What type of filesystem is on the partition?
-6. Command:
+    - What partition is the root filesystem on? xvda1
+    - What is the partition label? "cloudimg-rootfs"
+    - What type of filesystem is on the partition? ext4
+6. Command: `df -h` 
 ```
 Output here
 ```
