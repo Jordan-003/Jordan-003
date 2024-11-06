@@ -5,20 +5,20 @@
 
 ## Part 1 - Game the system
 
-- Game name: 
-- How to install:
-- Location of game executable:
-- How to run game:
+- Game name: bastet
+- How to install: `sudo apt install bastet`
+- Location of game executable: bastet: /usr/games/bastet /usr/share/man/man6/bastet.6.gz
+- How to run game: `bastet`
 
 ## Part 2 - Process Control
 
 1. `ps` field descriptions:
-   - USER / UID:
-   - PID:
-   - PPID:
-   - TTY:
-   - STAT:
-   - COMMAND / CMD:
+   - USER / UID: ubuntu
+   - PID: 888
+   - PPID: 
+   - TTY: pts/1
+   - STAT: S+
+   - COMMAND / CMD: bastet
 2. `ps` command:
 3. Output of `ps` with two shells, one running the game:
 ```
