@@ -29,7 +29,7 @@ Output of command goes here
    - Parent process id: 
    - What is the parent process: 
 5. `kill` to kill only the game:
-   - Describe what the effect was: 
+   - Describe what the effect was: The game in the other tab closed.
 6. `kill` to kill the game and it's parent process: 
    - Describe what the effect was:
 7. Describe what happens if you close / `exit` your connection with Shell C and determine if you can reenter the game (resume the process).
